@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>css variable</title>
+      <style>
+            :root {
+                  --primcolour: blue;
+                  --textcolour: white;
+                  --backcolour: rgb(163, 163, 255);
+            }
+
+            * {
+                  margin: 0px;
+                  padding: 0px;
+            }
+
+            body {
+                  background-color: var(--backcolour);
+            }
+
+            nav {
+                  background-color: var(--primcolour);
+                  padding: 0px;
+            }
+
+            ul {
+                  display: flex;
+                  padding: 0px;
+            }
+
+            ul li {
+                  list-style: none;
+                  padding: 25px;
+            }
+
+            a {
+                  color: var(--textcolour);
+                  text-decoration: none;
+            }
+      </style>
+</head>
+
+<body>
+      <header>
+            <nav>
+                  <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">About</a></li>
+                        <li><a href="/">Service</a></li>
+                        <li><a href="/">Contact</a></li>
+                  </ul>
+            </nav>
+      </header>
+
+</body>
+
+</html>

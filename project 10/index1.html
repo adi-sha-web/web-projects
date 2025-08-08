@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            .container {
+                  margin: auto;
+                  position: relative;
+                  width: 90vw;
+                  background-color: chocolate;
+                  height: 567px;
+            }
+
+            .box {
+                  background-color: darkred;
+                  width: 100px;
+                  height: 100px;
+                  border-radius: 100%;
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  animation: bounce 10s cubic-bezier(0.21, 0.68, 1, 1) infinite ;  
+            }
+
+            @keyframes bounce {
+                  0% {
+                        transform: translateX(0px) translateY(0px);
+                  }
+                  25% {
+                        transform: translateX(150px) translateY(-500px);
+                  }
+                  50% {
+                        transform: translateX(250px) translateY(0px);
+                  }
+                  75% {
+                        transform: translateX(350px) translateY(-250px);      
+                  }
+
+                  100% {
+                        transform: translateX(450px) translateY(0px);      
+                  }
+            }
+
+      </style>
+</head>
+
+<body>
+      <div class="container">
+            <div class="box">
+
+            </div>
+      </div>
+
+</body>
+
+</html>

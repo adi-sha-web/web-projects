@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Simple HTML Page</title>
+      <link rel="stylesheet" href="style.css">
+      <style>
+            body {
+                  background-color: rgb(195, 0, 255);
+                  color: white;
+                  margin: 16px;
+            }
+
+            form {
+                  width: 500px;
+                  border: 7px solid black;
+                  padding: 5px;
+            }
+
+            div {
+                  margin: 10px;
+            }
+      </style>
+</head>
+
+<body>
+      <h1>Welcome to My Website</h1>
+      <p>This is a simple HTML page.</p>
+
+      <form>
+            <table>
+                  <thead>
+                        <div>
+                              <tr>
+                                    <td><label for="name">Name: </label></td>
+                                    <td><input type="text" id="name" placeholder="ENTER YOUR NAME"></td>
+                              </tr>
+                        </div>
+                  </thead>
+                  <div>
+                        <tr>
+                              <td><label for="gender">Gender: </label></td>
+                              <td><input type="radio" id="Male" name="gender" value="male">
+                                    <label for="Male">Male</label>
+                                    <input type="radio" id="Female" name="gender">
+                                    <label for="Female">Female</label>
+                              </td>
+                        </tr>
+                  </div>
+                  <div>
+                        <tr>
+                              <td><label for="email">Email: </label></td>
+                              <td><input type="email" id="email" name="email" placeholder="ENTER YOUR Email" required>
+                              </td>
+                        </tr>
+                  </div>
+                  <div>
+                        <tr>
+                              <td><label for="password">Password: </label></td>
+                              <td><input type="password" id="password" name="password" placeholder="ENTER YOUR Password"
+                                          required></td>
+                        </tr>
+                  </div>
+                  <div>
+                        <tr>
+                              <td><label for="dob">Date of Birth: </label></td>
+                              <td><input type="date" id="dob" name="dob" placeholder="hi hello"></td>
+                        </tr>
+                  </div>
+                  <div>
+                        <tr>
+                              <td><label for="file">Upload File: </label></td>
+                              <td><input type="file" id="file" name="file"></td>
+                        </tr>
+                  </div>
+                  <div>
+                        <tr>
+                              <td><label for="color">Favorite Color: </label></td>
+                              <td><input type="color" id="color" name="color"></td>
+                        </tr>
+                  </div>
+                  <div>
+                        <tr>
+                              <td><label for="range">Range: </label></td>
+                              <td><input type="range" id="range" name="range" min="0" max="100"></td>
+                        </tr>
+                  </div>
+                  <div>
+                        <tr>
+                              <td><label for="number">Number: </label></td>
+                              <td><input type="number" id="number" name="number" min="1" max="10"></td>
+                        </tr>
+                  </div>
+                  <div>
+                        <tr>
+                              <td><label for="tel">Telephone: </label></td>
+                              <td><input type="tel" id="tel" name="tel"></td>
+                        </tr>
+                  </div>
+                  <div>
+                        <tr>
+                              <td><label for="url">Website: </label></td>
+                              <td><input type="url" id="url" name="url"></td>
+                        </tr>
+                  </div>
+                  <div>
+                        <tr>
+                              <td><label for="search">Search: </label></td>
+                              <td><input type="search" id="search" name="search"></td>
+                        </tr>
+                  </div>
+                  <div>
+                        <tr>
+                              <td><label for="textarea">Message: </label></td>
+                              <td><textarea id="textarea" name="textarea" placeholder="ENTER YOUR NAME"></textarea></td>
+                        </tr>
+                  </div>
+                  <div>
+                        <tr>
+                              <td><label for="select">Select: </label></td>
+                              <td><select id="select" name="select">
+                                          <option value="option1">Option 1</option>
+                                          <option value="option2">Option 2</option>
+                                          <option value="option3">Option 3</option>
+                                    </select></td>
+                        </tr>
+                  </div>
+                  <div>
+                        <tr>
+                              <td><input type="submit" value="Submit"></td>
+                        </tr>
+                  </div>
+            </table>
+      </form>
+      <script src="script.js"></script>
+</body>
+
+</html>

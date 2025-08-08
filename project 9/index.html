@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            body {
+                  justify-self: center;
+            }
+
+            header {
+                  margin: 0px 25px;
+            }
+
+            nav {
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  gap: 40px;
+            }
+
+            ul {
+                  display: flex;
+                  list-style: none;
+                  gap: 20px;
+                  align-items: center;
+                  justify-self: flex-end;
+                  flex-wrap: wrap;
+
+            }
+
+            ul li {
+                  display: flex;
+                  align-items: center;
+
+            }
+
+            a {
+                  text-decoration: none;
+                  color: black;
+                  padding-right: 3px;
+
+            }
+
+            svg {
+                  display: flex;
+                  align-content: center;
+                  cursor: pointer;
+            }
+
+            img {
+                  cursor: pointer;
+            }
+
+            main .ma {
+                  margin: 0px 25px;
+                  margin-top: 66px;
+                  text-align: center;
+            }
+
+            .p {
+                  margin-top: 55px;
+                  margin-bottom: 30px;
+                  font-size: x-large;
+                  width: 80%;
+                  justify-self: center;
+            }
+
+            .in {
+                  margin-top: 10px;
+                  padding: 15px 25px;
+                  border-radius: 5px;
+                  font-weight: bold;
+                  font-size: 16px;
+                  background-color: #00b6d1;
+                  color: white;
+                  cursor: pointer;
+                  border: none;
+
+            }
+
+            .ma span {
+                  padding-top: 50px;
+                  font-size: xxx-large;
+            }
+
+            .main2 {
+                  width: 960px;
+            }
+
+            .grid {
+                  margin-top: 40px;
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  column-gap: 88px;
+                  row-gap: 55px;
+                  width: 960px;
+                  margin: auto;
+
+            }
+
+            .grid>div {
+
+                  background-color: #f9f9f9;
+                  text-align: center;
+                  padding: 20px 0;
+                  font-weight: bold;
+                  font-size: 20px;
+            }
+
+            .but button {
+                  background-color: #5cb85c;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  margin-top: 30px;
+                  padding: 10px 15px;
+                  font-weight: bold;
+            }
+
+            p {
+                  display: flex;
+                  align-items: center;
+            }
+
+            .main2 img {
+                  padding-right: 20px;
+            }
+      </style>
+</head>
+
+<body>
+      <header>
+            <nav>
+                  <div class="logo">
+                        <img width="200px" src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp"
+                              alt="cart">
+                  </div>
+                  <div class="main">
+
+
+                        <ul>
+                              <li><a href="index.html">Product</a><svg xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 24 24" width="20" height="20" color="#000000" fill="none">
+                                          <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                    </svg></li>
+                              <li><a href="about.html">For Business</a><svg xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 24 24" width="20" height="20" color="#000000" fill="none">
+                                          <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                    </svg></li>
+                              <li><a href="contact.html">Resources</a><svg xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 24 24" width="20" height="20" color="#000000" fill="none">
+                                          <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                    </svg></li>
+                              <li><a href="login.html">Support</a><svg xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 24 24" width="20" height="20" color="#000000" fill="none">
+                                          <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                    </svg></li>
+                              <li><a href="signup.html">Our company</a><svg xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 24 24" width="20" height="20" color="#000000" fill="none">
+                                          <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                    </svg></li>
+                              <li><img width="20px" height="15px" src="https://img.icons8.com/ios/452/shopping-cart.png"
+                                          alt="cart"></li>
+                        </ul>
+
+
+                  </div>
+
+            </nav>
+      </header>
+      <main>
+            <div class="ma">
+
+                  <span>
+
+                        Download <b>UltraEdit</b> for Windows <img
+                              src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt="rating">
+                  </span>
+                  <p class="p">Download and try UltraEdit before you buy it! This download includes the full Windows version of the text editor.</p>
+                  <button class="in">Download Mac or linux version now</button>
+
+            </div>
+            <div class="main2">
+
+                  <div>
+                        <p> <img width="60px"
+                                    src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_logo_icon_white.png"
+                                    alt="">Download UltraEdit&nbsp;<small>v<span data-teams="true">2024.2 (released
+                                          2025-01-15) |
+                                          <a>Hotfix information&nbsp;</a></span></small></p>
+                  </div>
+                  <div class="grid">
+
+                        <div>
+                              <div>
+                                    English
+                              </div>
+                              <div class="but">
+                                    <!-- <button>Download 32-bit</button> -->
+                                    <button>Download 64-bit</button>
+                              </div>
+                        </div>
+                        <div>
+                              <div>
+
+                                    English
+                              </div>
+                              <div class="but">
+                                    <!-- <button>Download 32-bit</button> -->
+                                    <button>Download 64-bit</button>
+                              </div>
+                        </div>
+                        <div>
+                              <div>
+
+                                    English
+                              </div>
+                              <div class="but">
+                                    <!-- <button>Download 32-bit</button> -->
+                                    <button>Download 64-bit</button>
+                              </div>
+                        </div>
+                        <div>
+                              <div>
+
+                                    English
+                              </div>
+                              <div class="but">
+                                    <!-- <button>Download 32-bit</button> -->
+                                    <button>Download 64-bit</button>
+                              </div>
+                        </div>
+                        <div>
+                              <div>
+
+                                    English
+                              </div>
+                              <div class="but">
+                                    <!-- <button>Download 32-bit</button> -->
+                                    <button>Download 64-bit</button>
+                              </div>
+                        </div>
+                        <div>
+                              <div>
+
+                                    English
+                              </div>
+                              <div class="but">
+                                    <!-- <button>Download 32-bit</button> -->
+                                    <button>Download 64-bit</button>
+                              </div>
+                        </div>
+                        <div>
+                              <div>
+
+                                    English
+                              </div>
+                              <div class="but">
+                                    <!-- <button>Download 32-bit</button> -->
+                                    <button>Download 64-bit</button>
+                              </div>
+                        </div>
+
+
+
+                  </div>
+            </div>
+      </main>
+</body>
+
+</html>

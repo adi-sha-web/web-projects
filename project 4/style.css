@@ -1,0 +1,540 @@
+* {
+      font-weight: 400;
+      color: white;
+      text-align: center;
+      -webkit-transition: all .3s;
+      user-select: none;
+}
+
+body {
+      margin: 0;
+      position: fixed;
+      background: black;
+      /* font-family: 'Varela Round', sans-serif; */
+}
+
+#player {
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      bottom: 0;
+      transition: all 1s ease;
+      overflow: hidden;
+}
+
+.cn {
+      background: linear-gradient(black 50%, rgba(0, 0, 0, 0) 180%);
+      background-size: 100% 100%;
+}
+
+.bgg {
+      background: linear-gradient(90deg, cyan, purple);
+      background-size: 200% 200%;
+      animation: gradient 5s linear infinite;
+}
+
+@keyframes gradient {
+      0% {
+            background-position: 0% 0%;
+      }
+
+      50% {
+            background-position: 100% 0%;
+      }
+
+      100% {
+            background-position: 0% 0%;
+      }
+}
+
+#playerImage {
+      height: calc(100vh / 3);
+      width: calc(100vh / 3);
+      background: rgb(55, 55, 55);
+      border-radius: 22.5px;
+      top: calc(25vh - calc(100vh / 6));
+      left: calc(50vw - calc(100vh / 6));
+      position: fixed;
+      border: .5px solid rgb(70, 70, 70);
+      transition: all 1s, opacity .3s;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' background='red' fill='white'%3E%3Cpath d='M332.8,76.8c-28.232,0-51.2-22.968-51.2-51.2C281.6,11.462,270.138,0,256,0 c-14.138,0-25.6,11.462-25.6,25.6v311.294c-15.075-8.015-32.555-12.628-51.2-12.628c-56.463,0-102.4,42.109-102.4,93.867 S122.737,512,179.2,512s102.4-42.109,102.4-93.867v-303.91C296.675,122.967,314.155,128,332.8,128c28.232,0,51.2,22.968,51.2,51.2 c0,14.138,11.462,25.6,25.6,25.6s25.6-11.462,25.6-25.6C435.2,122.737,389.263,76.8,332.8,76.8z'/%3E%3Cpath d='M230.4,336.894c-15.075-8.015-32.555-12.628-51.2-12.628c-56.463,0-102.4,42.109-102.4,93.867 S122.737,512,179.2,512s102.4-42.109,102.4-93.867V256h-51.2V336.894z'/%3E%3Ccircle cx='175' cy='420' r='40' fill='rgb(55,55,55)'%3E%3C/circle%3E%3C/svg%3E");
+      background-size: 40%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+}
+
+#pimg {
+      height: 100%;
+      width: 100%;
+      border-radius: 20px;
+      background-color: transparent;
+      background-size: 100%;
+      background-repeat: no-repeat;
+}
+
+#musicIcon {
+      transform: scale(.4);
+      position: relative;
+}
+
+h3,
+h5 {
+      height: .1px;
+      position: absolute;
+      bottom: 50vh;
+      padding: auto;
+      left: 0;
+      width: 100vw;
+}
+
+h5 {
+      color: gray;
+      margin-top: 30px;
+      bottom: calc(50vh - 30px);
+}
+
+#seekbar {
+      height: 3px;
+      width: 100%;
+      background: rgba(200, 200, 200, .5);
+      border-radius: 900px;
+      overflow: hidden;
+}
+
+#seekbarc {
+      background: white;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      left: -100%;
+      transition: none;
+}
+
+#seekbarb {
+      background: white;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      left: -100%;
+      transition: none;
+}
+
+#seekDot {
+      height: 15px;
+      width: 15px;
+      background: white;
+      position: absolute;
+      left: -7.5px;
+      border-radius: 900px;
+      transition: transform .3s;
+}
+
+#seekCon {
+      width: 85vw;
+      height: 15px;
+      position: absolute;
+      left: 7.5vw;
+      bottom: 120px;
+      display: flex;
+      align-items: center;
+}
+
+#changingT {
+      width: 50px;
+      position: absolute;
+      top: -10px;
+      left: -25px;
+      transition: top .3s, opacity .3s;
+      font-size: 15px;
+      opacity: 0;
+}
+
+#ct,
+#dr {
+      font-size: 10px;
+      position: absolute;
+      top: 20px;
+}
+
+#dr {
+      right: 0;
+}
+
+#play {
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      bottom: 5vh;
+      left: calc(50vw - 10px);
+}
+
+#btnset {
+      height: 30px;
+      width: 85vw;
+      position: absolute;
+      bottom: 62.5px;
+      left: 7.5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      fill: white;
+}
+
+#btnset2 {
+      height: 30px;
+      width: 85vw;
+      position: absolute;
+      bottom: 150px;
+      left: 7.5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      fill: white;
+}
+
+#btnset3 {
+      height: 30px;
+      width: 95vw;
+      position: absolute;
+      bottom: calc(100vh - 40px);
+      left: 2.5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      fill: white;
+}
+
+#btnset4 {
+      height: 30px;
+      width: 40vw;
+      position: absolute;
+      bottom: 15px;
+      right: 2.5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      fill: white;
+}
+
+.button {
+      height: 17px;
+      width: 17px;
+      display: block;
+}
+
+.buttonC {
+      height: 35px;
+      width: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      transition: all .1s;
+      fill: white;
+}
+
+#minplayer {
+      width: 100vw;
+      height: 60px;
+      background: linear-gradient(90deg, rgb(0, 81, 81), rgb(40, 0, 40));
+      position: fixed;
+      bottom: 0;
+      background-size: 200% 200%;
+      transition: all 1s;
+      animation: gradient2 5s linear infinite;
+}
+
+@keyframes gradient2 {
+      0% {
+            background-position: 0% 0%;
+      }
+
+      50% {
+            background-position: 100% 0%;
+      }
+
+      100% {
+            background-position: 0% 0%;
+      }
+}
+
+h4 {
+      position: absolute;
+      left: 60px;
+      top: -11px;
+
+}
+
+h6 {
+      position: absolute;
+      left: 60px;
+      bottom: -11px;
+
+}
+
+#minbtnset {
+      opacity: 0;
+      transition: all 1s;
+      display: none;
+}
+
+#volc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+#volbar {
+      background: linear-gradient(90deg, rgba(300, 300, 300, .7) 100%, rgba(300, 300, 300, .3) 100%);
+      height: 15px;
+      width: 15px;
+      border-radius: 900px;
+      right: 10px;
+      bottom: calc(100vh - 30px);
+      text-align: right;
+      color: rgba(0, 0, 0, .5);
+      font-size: 9px;
+      font-weight: 900;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+
+}
+
+#listC {
+      height: calc(100vh - 230px);
+      width: 100vw;
+      background: linear-gradient(black 70%, transparent);
+      position: absolute;
+      left: 0;
+      bottom: 185px;
+      border: 0px solid red;
+      opacity: 0;
+      display: none;
+}
+
+#order {
+      position: absolute;
+      left: 2.5vw;
+      margin: 10px 0 10px;
+}
+
+#cot {
+      font-size: 13px;
+      color: gray;
+      position: absolute;
+      left: calc(2.5vw + 25px);
+      padding: 10px;
+      margin: 10px 0 10px;
+}
+
+#sn {
+      position: absolute;
+      right: 2.5vw;
+      font-size: 13px;
+      padding: 10px;
+      margin: 10px 0 10px;
+
+}
+
+#lists {
+      height: calc(100% - 55px);
+      width: 90vw;
+      position: absolute;
+      bottom: 0;
+      left: 5vw;
+      overflow-x: hidden;
+      overflow-y: scroll;
+}
+
+#lists::-webkit-scrollbar {
+      display: none;
+}
+
+.card {
+      height: 70px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+}
+
+.ci {
+      height: 50px;
+      width: 50px;
+      background: rgba(300, 300, 300, .2);
+      position: absolute;
+      left: 0px;
+      top: 5px;
+      border-radius: 10px;
+      display: inline;
+      /*background-image: url("https://www.sololearn.com/Icons/Avatars/17648070.jg");*/
+      background-size: 100%;
+      background-repeat: no-repeat;
+}
+
+.bgi {
+      content: "";
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='white'%3E%3Cpath d='M332.8,76.8c-28.232,0-51.2-22.968-51.2-51.2C281.6,11.462,270.138,0,256,0 c-14.138,0-25.6,11.462-25.6,25.6v311.294c-15.075-8.015-32.555-12.628-51.2-12.628c-56.463,0-102.4,42.109-102.4,93.867 S122.737,512,179.2,512s102.4-42.109,102.4-93.867v-303.91C296.675,122.967,314.155,128,332.8,128c28.232,0,51.2,22.968,51.2,51.2 c0,14.138,11.462,25.6,25.6,25.6s25.6-11.462,25.6-25.6C435.2,122.737,389.263,76.8,332.8,76.8z'/%3E%3Cpath d='M230.4,336.894c-15.075-8.015-32.555-12.628-51.2-12.628c-56.463,0-102.4,42.109-102.4,93.867 S122.737,512,179.2,512s102.4-42.109,102.4-93.867V256h-51.2V336.894z'/%3E%3Ccircle cx='175' cy='420' r='40' fill='rgb(55,55,55)'%3E%3C/circle%3E%3C/svg%3E");
+      height: 50px;
+      width: 50px;
+      background-size: 40%;
+      background-repeat: no-repeat;
+      background-position: 50% 70%;
+      position: relative;
+}
+
+.sl {
+      transform: scale(.4);
+      background: none;
+}
+
+.card :nth-child(2) {
+      width: calc(100vw - 170px);
+      position: absolute;
+      left: 60px;
+      top: 10px;
+      display: inline;
+      text-align: left;
+}
+
+.card :nth-child(3) {
+      width: calc(100vw - 170px);
+      position: absolute;
+      left: 60px;
+      bottom: 10px;
+      font-size: 13px;
+      text-align: left;
+      color: gray;
+}
+
+.cardin {
+      height: 60px;
+      width: 100%;
+      position: absolute;
+}
+
+.vis {
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      right: 40px;
+      top: 20px;
+      stroke: none;
+}
+
+.cmen {
+      position: absolute;
+      right: 0;
+      top: 12.5px;
+}
+
+#nas {
+      width: 90vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      left: 5vw;
+      top: 20px;
+      font-size: 18px;
+}
+
+#mlistc {
+      height: calc(100vh - 130px);
+      width: 100vw;
+      top: 100px;
+      position: fixed;
+      background-color: rgb(25, 25, 25);
+      border-radius: 25px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+}
+
+#mlistc::-webkit-scrollbar {
+      display: none;
+}
+
+#ctrlc {
+      height: 50px;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: 5%;
+      margin-top: 20px;
+}
+
+#mlst {
+      position: absolute;
+      width: 90vw;
+      left: 5vw;
+
+}
+
+hr {
+      height: 1.5px;
+      border: none;
+      background: rgba(300, 300, 300, .1);
+      margin: 0;
+      width: calc(90vw - 75px);
+      margin-left: 60px;
+
+}
+
+#search {
+      height: 16px;
+      width: calc(90vw - 40px);
+      position: fixed;
+      right: calc(5vw + 40px);
+      border: 0;
+      border-radius: 50px;
+      background: rgb(30, 30, 30);
+      outline: none;
+      padding: 8px;
+      text-align: left;
+      text-decoration: none;
+      display: none;
+}
+
+#result {
+      padding: 24.7px;
+      color: gray;
+      display: none;
+}
+
+#load {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      background: rgba(0, 0, 0, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      transition:ease-out 40s;
+}
+
+#load :nth-child(1) {
+      border-bottom: 2px solid rgb(300, 0, 100);
+      width: 250px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+      margin-bottom: 7px;
+
+}
+
+#load :nth-child(1) :before {
+      content: "Simple & Clean UI";
+      width: 200px;
+      position: absolute;
+      color: white;
+      margin-top: 60px;
+      font-size: 15px;
+      letter-spacing: 1.5px;
+      justify-content: center;
+      align-items: center;
+
+}

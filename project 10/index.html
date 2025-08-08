@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            .con {
+                  margin: auto;
+                  position: relative;
+                  width: 90vw;
+                  background-color: chocolate;
+                  height: 90vh;
+            }
+
+            .ball {
+                  background-color: darkred;
+                  width: 100px;
+                  height: 100px;
+                  border-radius: 50%;
+                  position: absolute ;
+                  left: 0;
+                  bottom: 0;
+                  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+                  animation: bounce 1s ease-out infinite alternate, move 3s linear infinite ;
+            }
+
+            @keyframes bounce {
+                  from {
+                        bottom: 0;
+                  }
+                  
+                  to {
+                        bottom: 90%;
+                  }
+            }
+
+            @keyframes move {
+                  from {
+                        left: 0;
+                  }
+
+                  to {
+                        left: 90%;
+                  }
+
+            }
+      </style>
+
+</head>
+
+<body>
+      <div class="con">
+            <div class="ball">
+
+            </div>
+      </div>
+</body>
+
+</html>
