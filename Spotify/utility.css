@@ -1,0 +1,30 @@
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(54, 54, 54);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: gray
+}
+
+ footer{
+  /* height: 100%; */
+  background: linear-gradient(270deg, #28af31, #509bf5,#af2896);
+  background-size: 300% 100%;
+  animation: gradientMove 3s linear infinite;
+}
+
+/* Gradient rotation animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
